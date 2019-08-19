@@ -1,1 +1,51 @@
-<h1>Guten Tag</h1>
+<html>
+    <head>
+        <title>Sketch</title>
+        <link rel='stylesheet' href='style.css'>
+        <!-- <h1>Sketcher . .</h1> -->
+    </head>
+    <body onload="generate_grid();">
+        <div id='instructions'>
+            <h2>
+                Choose between Options to draw on the Board..
+            </h2>
+            <h3>Click to Draw</h3>
+            <p>The Button on the Left to Clear the Board</p>
+            <p>The Arrow Option darkens the grid's Color gradually</p>
+            <p>The Spray Toggle allows you to draw on the Board just by moving the Mouse</p>
+        </div>
+        <div id='board'>
+            <div id='settings'> 
+                <div id='grid_control'>
+                    <label class="grid_label" for='dimension'> Grid Size</label>
+                    <br>
+                    <input  title='Choose Grid Size'  id='dimension' type="number" min="2" max="250" value="16"> &ldca;
+                     <!-- <label class="grid_label" for='dimension'> Grid Height/Width&ldca;</label> --> 
+                </div>
+                <div id='options'> 
+                    <img title='Clear Board' id='clear' src='images/clear.png' > 
+                    <button title='Single Color' id='single' class="single_class active"><input title='Change Color' id='color' type="color"></button>
+                    <img title='Gradual Coloring' id='gradual' class="gradual_class" src='images/gradual.png'>
+                    <img title='Random Coloring' id='rainbow' class="rainbow_class" src='images/rainbow.png'>
+                    <img title='Erase'id='rubber' class="rubber_class" src='images/rubber.png'>
+                </div>
+                <div id='grid_mode'>
+                    <label class="switch">
+                        <input id='spray_switch' class="ticker" type="checkbox">Spray
+                        <div title='Wave/Click Coloring' class="switch-btn"></div>
+                    </label>
+                    <label class="switch">
+                        <input id='hide_grid' class="ticker" type="checkbox">Hide Grid
+                        <div title='Hide/Show Grid' class="switch-btn"></div>
+                    </label>
+                </div>
+            </div>
+            <div id='canvas'>
+
+            </div>
+        </div>
+        
+        <script type="text/javascript" src='main.js'></script>
+    </body>
+</html>
+
